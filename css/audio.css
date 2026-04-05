@@ -9,7 +9,7 @@
 
 /* --- Spotify Embed Wrapper --- */
 .spotify-embed {
-  max-width: 500px;
+  max-width: 500px,;
   margin-inline: auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
