@@ -1,0 +1,31 @@
+/* ============================================
+   HASEBLACK — Audio Section
+   Spotify Embed, contained & styled
+   ============================================ */
+
+.audio-section {
+  position: relative;
+}
+
+/* --- Spotify Embed Wrapper --- */
+.spotify-embed {
+  max-width: 500px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  box-shadow: var(--shadow-glow-purple);
+  transition: box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.spotify-embed:hover {
+  box-shadow: 0 0 40px var(--nebula-purple-glow),
+              0 0 80px rgba(168, 85, 247, 0.1);
+}
+
+.spotify-embed iframe {
+  display: block;
+  border: none;
+  border-radius: var(--radius-lg);
+  max-height: 500px;
+}

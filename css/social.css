@@ -1,0 +1,134 @@
+/* ============================================
+   HASEBLACK — Social Links Grid
+   "L'Écosystème de Liens"
+   ============================================ */
+
+.social-section {
+  position: relative;
+}
+
+/* --- Link Group --- */
+.link-group {
+  margin-bottom: var(--space-2xl);
+}
+
+.link-group:last-child {
+  margin-bottom: 0;
+}
+
+.link-group__label {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--stardust-dim);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+/* --- Individual Link Card --- */
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid rgba(226, 232, 240, 0.06);
+  border-radius: var(--radius-md);
+  transition: transform var(--duration-normal) var(--ease-out),
+              background var(--duration-normal),
+              border-color var(--duration-normal),
+              box-shadow var(--duration-normal);
+  text-decoration: none;
+}
+
+.link-card:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: var(--bg-card-hover);
+}
+
+/* Streaming links (Écouter) — purple accent */
+.link-group--listen .link-card {
+  border-color: rgba(168, 85, 247, 0.12);
+}
+
+.link-group--listen .link-card:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+/* Social links (Suivre) — blue accent */
+.link-group--follow .link-card {
+  border-color: rgba(59, 130, 246, 0.1);
+}
+
+.link-group--follow .link-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* --- Icon --- */
+.link-card__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-card__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.link-group--listen .link-card__icon {
+  color: var(--nebula-purple-light);
+}
+
+.link-group--follow .link-card__icon {
+  color: var(--cosmic-blue-light);
+}
+
+/* --- Text --- */
+.link-card__text {
+  flex: 1;
+}
+
+.link-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  color: var(--stardust-white);
+}
+
+.link-card__sub {
+  font-size: var(--fs-caption);
+  color: var(--stardust-faint);
+  margin-top: 2px;
+}
+
+/* --- Arrow / external indicator --- */
+.link-card__arrow {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--stardust-faint);
+  transition: transform var(--duration-fast), color var(--duration-fast);
+}
+
+.link-card__arrow svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.link-card:hover .link-card__arrow {
+  color: var(--stardust-white);
+  transform: translateX(3px);
+}

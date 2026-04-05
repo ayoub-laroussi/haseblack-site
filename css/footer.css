@@ -1,0 +1,40 @@
+/* ============================================
+   HASEBLACK — Footer
+   "L'Ancrage"
+   ============================================ */
+
+.footer {
+  padding: var(--space-2xl) var(--space-lg);
+  text-align: center;
+  position: relative;
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--stardust-white);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.05em;
+}
+
+.footer__contact {
+  margin-bottom: var(--space-md);
+}
+
+.footer__contact a {
+  font-size: var(--fs-small);
+  color: var(--nebula-purple-light);
+  transition: color var(--duration-fast);
+  letter-spacing: 0.02em;
+}
+
+.footer__contact a:hover {
+  color: var(--stellar-gold-light);
+}
+
+.footer__copyright {
+  font-size: var(--fs-caption);
+  color: var(--stardust-faint);
+  letter-spacing: 0.05em;
+}

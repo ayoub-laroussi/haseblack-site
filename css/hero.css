@@ -1,0 +1,141 @@
+/* ============================================
+   HASEBLACK — Hero Section
+   "L'Entrée dans l'Atmosphère"
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: var(--space-xl);
+  overflow: hidden;
+}
+
+/* --- Radial glow behind content --- */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--nebula-purple-glow) 0%,
+    rgba(107, 33, 168, 0.1) 40%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: glow-pulse 8s ease-in-out infinite alternate;
+}
+
+/* --- Artist Name --- */
+.hero__title {
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-black);
+  letter-spacing: -0.03em;
+  background: linear-gradient(
+    135deg,
+    var(--stardust-white) 0%,
+    var(--nebula-purple-light) 50%,
+    var(--stellar-gold-light) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: var(--z-content);
+  margin-bottom: var(--space-md);
+}
+
+/* --- Tagline --- */
+.hero__tagline {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-light);
+  color: var(--stardust-dim);
+  max-width: 500px;
+  line-height: 1.7;
+  position: relative;
+  z-index: var(--z-content);
+  margin-bottom: var(--space-2xl);
+  font-style: italic;
+}
+
+/* --- CTA Button --- */
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-display);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--stardust-white);
+  background: linear-gradient(135deg, var(--nebula-purple), var(--nebula-purple-light));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--radius-full);
+  position: relative;
+  z-index: var(--z-content);
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.hero__cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px var(--nebula-purple-glow),
+              0 0 80px rgba(168, 85, 247, 0.15);
+}
+
+.hero__cta:active {
+  transform: scale(0.98);
+}
+
+.hero__cta svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* --- Scroll hint --- */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--stardust-faint);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero__scroll-hint svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* --- Animations --- */
+@keyframes glow-pulse {
+  0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
