@@ -9,7 +9,7 @@
 
 /* --- Spotify Embed Wrapper --- */
 .spotify-embed {
-  max-width: 500px,;
+  max-width: 500px, ;
   margin-inline: auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -20,7 +20,7 @@
 
 .spotify-embed:hover {
   box-shadow: 0 0 40px var(--nebula-purple-glow),
-              0 0 80px rgba(168, 85, 247, 0.1);
+    0 0 80px rgba(168, 85, 247, 0.1);
 }
 
 .spotify-embed iframe {
