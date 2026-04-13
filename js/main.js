@@ -227,8 +227,8 @@
   const introBtn = document.getElementById('intro-btn');
   const mainContent = document.getElementById('main-content');
 
-  if (introBtn && introOverlay) {
-    introBtn.addEventListener('click', () => {
+  if (introOverlay) {
+    introOverlay.addEventListener('click', () => {
       introOverlay.classList.add('hidden');
       if (mainContent) mainContent.classList.remove('hidden');
       document.body.classList.remove('intro-active');
